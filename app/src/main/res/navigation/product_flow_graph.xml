@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/product_flow_graph"
+    app:startDestination="@id/addBmiFragment">
+    <fragment
+        android:id="@+id/addBmiFragment"
+        android:name="bmi.demo.application.presentation.ui.home.fragment.AddBmiFragment"
+        android:label="fragment_add_bmi"
+        tools:layout="@layout/fragment_add_bmi">
+        <action
+            android:id="@+id/action_addProductFragment_to_productFragment"
+            app:destination="@id/bmiDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bmiDetailsFragment"
+        android:name="bmi.demo.application.presentation.ui.home.fragment.BmiDetailsFragment"
+        android:label="fragment_bmi_details"
+        tools:layout="@layout/fragment_bmi_details" />
+
+</navigation>

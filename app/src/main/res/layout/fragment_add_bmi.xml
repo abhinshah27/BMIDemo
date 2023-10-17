@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".presentation.ui.home.fragment.AddBmiFragment">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_title"
+                    style="@style/raleway_400"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_60"
+                    android:gravity="center"
+                    android:text="@string/enter_personal_detail"
+                    android:textColor="@color/teal_dark"
+                    android:textSize="@dimen/sp_22"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/ed_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@drawable/square_shape_gray"
+                    android:hint="@string/name"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp_16"
+                    app:boxStrokeColor="@color/color_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                    tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_sub_title"
+                    style="@style/poppins_300"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_50"
+                    android:gravity="center"
+                    android:text="@string/calculate_your_body_mass_index"
+                    android:textColor="@color/color_gray"
+                    android:textSize="@dimen/sp_18"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ed_name"
+                    tools:ignore="TextContrastCheck" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_weight"
+                    style="@style/poppins_400"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:text="@string/weight"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_height"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_sub_title" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_height"
+                    style="@style/poppins_400"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/height"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_gender"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_weight"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_weight"
+                    app:layout_constraintTop_toTopOf="@+id/tv_weight" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_gender"
+                    style="@style/poppins_400"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_30"
+                    android:text="@string/gender"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_height"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_weight"
+                    app:layout_constraintTop_toTopOf="@+id/tv_weight" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_bmi_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    app:cardCornerRadius="@dimen/dp_0"
+                    app:cardElevation="@dimen/dp_6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_weight"
+                    app:strokeWidth="@dimen/dp_0">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_120"
+                        android:background="@color/white">
+
+                        <View
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="@dimen/dp_3"
+                            android:layout_marginHorizontal="@dimen/dp_8"
+                            android:layout_marginTop="@dimen/dp_30"
+                            android:background="@drawable/picker_divider"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@id/np_weight"
+                            app:layout_constraintStart_toStartOf="@id/np_weight"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <NumberPicker
+                            android:id="@+id/np_weight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_20"
+                            android:descendantFocusability="blocksDescendants"
+                            android:theme="@style/DefaultNumberPickerTheme"
+                            app:layout_constraintEnd_toStartOf="@+id/np_height"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHorizontal_chainStyle="spread_inside"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="@dimen/dp_3"
+                            android:layout_marginHorizontal="@dimen/dp_8"
+                            android:layout_marginTop="@dimen/dp_30"
+                            android:background="@drawable/picker_divider"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@id/np_height"
+                            app:layout_constraintStart_toStartOf="@id/np_height"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <NumberPicker
+                            android:id="@+id/np_height"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:descendantFocusability="blocksDescendants"
+                            android:theme="@style/DefaultNumberPickerTheme"
+                            app:layout_constraintEnd_toStartOf="@+id/np_gender"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/np_weight"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="@dimen/dp_3"
+                            android:layout_marginHorizontal="@dimen/dp_8"
+                            android:layout_marginTop="@dimen/dp_30"
+                            android:background="@drawable/picker_divider"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@id/np_gender"
+                            app:layout_constraintStart_toStartOf="@id/np_gender"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <NumberPicker
+                            android:id="@+id/np_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_20"
+                            android:descendantFocusability="blocksDescendants"
+                            android:theme="@style/DefaultNumberPickerTheme"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/np_height"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_calculate"
+                    style="@style/raleway_700"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_20"
+                    android:layout_marginVertical="@dimen/dp_30"
+                    android:background="@drawable/gradient_button"
+                    android:padding="@dimen/dp_14"
+                    android:text="@string/calculate"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16"
+                    app:backgroundTint="@null"
+                    app:cornerRadius="@dimen/dp_6"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/card_bmi_data"
+                    tools:ignore="VisualLintButtonSize" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

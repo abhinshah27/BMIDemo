@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Abhin Shah</string>
+    <string name="add_bmi_details">Add BMI Details</string>
+    <string name="bmi_details">BMI Details</string>
+    <string name="enter_personal_detail">Enter Personal Detail</string>
+    <string name="name">Name</string>
+    <string name="calculate_your_body_mass_index">Calculate Your Body Mass Index</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="gender">Gender</string>
+    <string name="calculate">Calculate</string>
+    <string name="body_mass_index">BODY MASS INDEX</string>
+    <string name="share">Share</string>
+    <string name="rate">Rate</string>
+    <string name="install">INSTALL</string>
+    <string name="ad">Ad</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="ponderal_index">Ponderal Index: 10.64kg/m3</string>
+    <string name="normal_bmi_range">Normal BMI range: 18.5kg/m2 – 25kg/m2</string>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="raleway_700">
+        <item name="fontWeight">700</item>
+        <item name="android:fontFamily">@font/raleway_bold</item>
+    </style>
+    <style name="raleway_600">
+        <item name="fontWeight">600</item>
+        <item name="android:fontFamily">@font/raleway_semibold</item>
+    </style>
+    <style name="raleway_400">
+        <item name="fontWeight">400</item>
+        <item name="android:fontFamily">@font/raleway_regular</item>
+    </style>
+
+    <style name="poppins_300">
+        <item name="fontWeight">300</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+    </style>
+    <style name="poppins_400">
+        <item name="fontWeight">400</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+    <style name="poppins_700">
+        <item name="fontWeight">700</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+    <style name="DefaultNumberPickerTheme" parent="Theme.MyApplication">
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_bmi_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".presentation.ui.home.fragment.BmiDetailsFragment">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_50"
+                    app:cardCornerRadius="@dimen/dp_8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_card">
+
+                        <View
+                            android:id="@+id/view_line1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_2"
+                            android:layout_marginTop="@dimen/dp_40"
+                            android:background="@color/white_30"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_title"
+                            style="@style/raleway_600"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:gravity="center"
+                            android:text="@string/body_mass_index"
+                            android:textColor="@color/white_30"
+                            android:textSize="@dimen/sp_14"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view_line1"
+                            tools:ignore="TextContrastCheck" />
+
+                        <View
+                            android:id="@+id/view_line2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_2"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:background="@color/white_30"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_bim_value"
+                            style="@style/poppins_400"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="@dimen/dp_0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_80"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view_line2" />
+
+                        <View
+                            android:id="@+id/view_line_bmi"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="@dimen/dp_2"
+                            android:layout_marginTop="@dimen/minus_dp_18"
+                            android:layout_marginBottom="@dimen/dp_10"
+                            android:background="@color/white"
+                            app:layout_constraintEnd_toEndOf="@+id/tv_bim_value"
+                            app:layout_constraintStart_toStartOf="@+id/tv_bim_value"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_bim_value" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_bim_result"
+                            style="@style/poppins_700"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_40"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_12"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view_line_bmi" />
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_bim_range"
+                            style="@style/poppins_400"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:gravity="center"
+                            android:text="@string/normal_bmi_range"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_12"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_bim_result"
+                            tools:ignore="TextContrastCheck" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_bim_ponderal_index"
+                            style="@style/poppins_400"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:gravity="center"
+                            android:text="@string/ponderal_index"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_12"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_bim_range"
+                            tools:ignore="TextContrastCheck" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_share"
+                            style="@style/raleway_400"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_30"
+                            android:layout_marginBottom="@dimen/dp_20"
+                            android:background="@drawable/square_shape"
+                            android:drawableStart="@drawable/ic_share"
+                            android:drawablePadding="@dimen/dp_6"
+                            android:paddingHorizontal="@dimen/dp_16"
+                            android:paddingVertical="@dimen/dp_6"
+                            android:text="@string/share"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_18"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/tv_rate"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_bim_ponderal_index"
+                            tools:ignore="TextContrastCheck" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_rate"
+                            style="@style/raleway_400"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dp_10"
+                            android:background="@drawable/square_shape"
+                            android:drawableStart="@drawable/ic_rate"
+                            android:drawablePadding="@dimen/dp_6"
+                            android:paddingHorizontal="@dimen/dp_16"
+                            android:paddingVertical="@dimen/dp_6"
+                            android:text="@string/rate"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_18"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_share"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/tv_share"
+                            app:layout_constraintTop_toTopOf="@+id/tv_share"
+                            tools:ignore="TextContrastCheck" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_native_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_4"
+            android:background="@drawable/square_shape_ad"
+            android:padding="@dimen/dp_4"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
